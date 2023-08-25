@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="StyleP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/0cuc5nq39d2loqg/bootstrap-tokenfield.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/popper.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section id="job-posting-area" class="py-5">
+        <div class="container">
+            <div class="job-posting-wrapper mx-auto p-3">
+    <h1 class="h1">Hello <%= username %>!</h1>
+    <form action="/ExternallyFundedProject" method="POST">
+        <div class="form-group">
+        <% if (Principal && Principal.length > 0) { %>
+        <% Principal.forEach(function(Principal) { %>
+        <label for="Principal"><h1><%= Principal %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any Principal Name yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="Principal" placeholder="Name of Principal Investigator/Co-PI" name="Principal">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/ExternallyFundedProject" method="POST">
+        <div class="form-group">
+        <% if (CropEXT && CropEXT.length > 0) { %>
+            <% console.log("Type of CropEXT:", typeof CropEXT); %>
+        <% CropEXT.forEach(function(CropEXT) { %>
+        <label for="CropEXT"><h1><%= CropEXT %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite CropEXT yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="CropEXT" placeholder="Name of the Crop" name="CropEXT">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/ExternallyFundedProject" method="POST">
+        <div class="form-group">
+        <% if (ResearchEXT && ResearchEXT.length > 0) { %>
+            <% console.log("Type of ResearchEXT:", typeof ResearchEXT); %>
+        <% ResearchEXT.forEach(function(ResearchEXT) { %>
+        <label for="ResearchEXT"><h1><%= ResearchEXT %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Title of Research yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="ResearchEXT" placeholder="Title of Research" name="ResearchEXT">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/ExternallyFundedProject" method="POST">
+        <div class="form-group">
+        <% if (ObjectivesEXT && ObjectivesEXT.length > 0) { %>
+            <% console.log("Type of ObjectivesEXT:", typeof ObjectivesEXT); %>
+        <% ObjectivesEXT.forEach(function(ObjectivesEXT) { %>
+        <label for="ObjectivesEXT"><h1><%= ObjectivesEXT %></h1></label>
+        <% }); %> 
+        <% } else { %>
+            <p>You haven't added any favorite Objectives yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="ObjectivesEXT" placeholder="Objectives" name="ObjectivesEXT">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/ExternallyFundedProject" method="POST">
+        <div class="form-group">
+        <% if (executionEXT && executionEXT.length > 0) { %>
+            <% console.log("Type of executionEXT:", typeof executionEXT); %>
+        <% executionEXT.forEach(function(executionEXT) { %>
+        <label for="executionEXT"><h1><%= executionEXT %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Year of execution yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="executionEXT" placeholder="Year of execution" name="executionEXT">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/ExternallyFundedProject" method="POST">
+        <div class="form-group">
+        <% if (DurationEXT && DurationEXT.length > 0) { %>
+            <% console.log("Type of DurationEXT:", typeof DurationEXT); %>
+        <% DurationEXT.forEach(function(DurationEXT) { %>
+        <label for="DurationEXT"><h1><%= DurationEXT %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Duration yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="DurationEXT" placeholder="Duration of experiment" name="DurationEXT">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/ExternallyFundedProject" method="POST">
+        <div class="form-group">
+        <% if (TreatmentEXT && TreatmentEXT.length > 0) { %>
+            <% console.log("Type of TreatmentEXT:", typeof TreatmentEXT); %>
+        <% TreatmentEXT.forEach(function(TreatmentEXT) { %>
+        <label for="TreatmentEXT"><h1><%= TreatmentEXT %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Treatment details: yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="TreatmentEXT" placeholder="Treatment details" name="TreatmentEXT">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    // put the upload file here
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+        <!-- Add other form fields here -->
+        <input type="hidden" name="sourcePage" value="<%= sourcePage %>">
+        <input type="file" name="file">
+    </div>
+        <button id="job-post-button" class="btn btn-primary mt-3" type="submit">Upload File</button>
+    </form>
+    
+    <form action="/ExternallyFundedProject" method="POST"> 
+        <div class="TD">
+            <table>
+            <div class="form-group">
+                <tr>
+                    <th>Treatment Details</th>
+                    <th>R1</th>
+                    <th>R2</th>
+                    <th>R3</th>
+                    <th>Mean</th>
+                </tr>
+                <% for (let i = 0; i < Math.max(TreatmentDetailsEXT.length, R1EXT.length, R2EXT.length, R3EXT.length); i++) { %>
+                    <tr>
+                        <td data-heading="Treatment Details"><%= i < TreatmentDetailsEXT.length ? TreatmentDetailsEXT[i] : '' %></td>
+                        <td data-heading="R1"><%= i < R1EXT.length ? R1EXT[i] : '' %></td>
+                        <td data-heading="R2"><%= i < R2EXT.length ? R2EXT[i] : '' %></td>
+                        <td data-heading="R3"><%= i < R3EXT.length ? R3EXT[i] : '' %></td>
+                        <td data-heading="Mean">
+                            <% 
+                            const r1ValueEXT = i < R1EXT.length && !isNaN(parseFloat(R1EXT[i])) ? parseFloat(R1EXT[i]) : 0;
+                            const r2ValueEXT = i < R2EXT.length && !isNaN(parseFloat(R2EXT[i])) ? parseFloat(R2EXT[i]) : 0;
+                            const r3ValueEXT = i < R3EXT.length && !isNaN(parseFloat(R3EXT[i])) ? parseFloat(R3EXT[i]) : 0;
+                            const meanValueEXT = (r1ValueEXT + r2ValueEXT + r3ValueEXT) / 3;
+                            %>
+                            <%= meanValueEXT.toFixed(2) %>
+                        </td>
+                        
+                        <td>
+                            <form action="/delete" method="POST">
+                                <input type="hidden" name="rowIndex" value="<%= i %>_extproject">
+                                <button id="job-post-button" class="btn btn-danger mt-3" type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                        <% } %>
+                
+    
+    
+            <tr>
+               
+                <td><input type="text" placeholder="Treatment Details" name="TreatmentDetailsEXT"></td>
+            <td><input type="text" placeholder="R1" name="R1EXT"></td>
+            <td><input type="text" placeholder="R2" name="R2EXT"></td>
+            <td><input type="text" placeholder="R3" name="R3EXT"></td>
+            <td><input type="text" placeholder="Mean" name="MeanEXT"></td>
+               <td><button id="job-post-button" class="btn btn-success mt-3" type="submit">Submit</button></td>
+            </tr>
+        </div>
+    </table>
+</div>
+            </form>
+        </div>
+    </div>
+</section>
+</body>
+</html>

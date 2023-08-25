@@ -1,0 +1,248 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.bodyL .login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+.bodyL .form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.bodyL .form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.bodyL .form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.bodyL .form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+} 
+.bodyL .form .messege {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.bodyL .form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+.bodyL .form .register-form {
+  display: none;
+}
+.bodyL .container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.bodyL .container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.bodyL .container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-waight: 300;
+  color: #1a1a1a;
+}
+.bodyL .container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.bodyL .container .info span a {
+  color: #000000;
+  text-decolation: none;
+}
+.bodyL .container .info span .fa {
+  color: #EF3B3A;
+}
+body .bodyL{
+    font-family: 'Bai Jamjuree', sans-serif !important;
+    height: 95vh; ;
+  /* background: #76b852; */
+  background:
+  linear-gradient(110deg, #24c173 50%, #9ae7ba 60%, #9ae7ba 72%, #d1f5de 52%, #d1f5de 0) 0 0/100% calc(100% - 40px) no-repeat,
+  linear-gradient(110deg, #62e6a5 52%, transparent 0) 0 100%/100% 100% no-repeat;
+
+  /* background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%); */
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 991px){
+    .bodyL .login-page {
+        width: 960px;
+        padding: 8% 0 0;
+        margin: auto;
+      }
+      .bodyL .form {
+
+        border-radius: 40px;
+        font-size: 35px !important;
+        position: relative;
+        z-index: 1;
+        background: #FFFFFF;
+        max-width: 760px;
+        height: 86rem;
+        margin: 0 auto 100px;
+        padding: 45px;
+        text-align: center;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      }
+      .bodyL .form input {
+
+        border-radius: 40px;
+        font-family: "Roboto", sans-serif;
+        outline: 0;
+        background: #f2f2f2;
+        width: 100%;
+        border: 0;
+        margin: 70px 0 70px 0;
+        padding: 35px;
+        box-sizing: border-box;
+        font-size: 80px;
+      }
+      .bodyL .form button {
+
+        border-radius: 40px;
+        font-family: "Roboto", sans-serif;
+        text-transform: uppercase;
+        outline: 0;
+        background: #4CAF50;
+        width: 100%;
+        border: 0;
+        padding: 55px;
+        color: #FFFFFF;
+        margin-top: 80px;
+        margin-bottom: 140px;
+        font-size: 54px;
+        -webkit-transition: all 0.3 ease;
+        transition: all 0.3 ease;
+        cursor: pointer;
+      }
+      .bodyL .form button:hover,.form button:active,.form button:focus {
+        background: #43A047;
+      } 
+      .bodyL .form .messege {
+        margin: 15px 0 0;
+        color: #b3b3b3;
+        font-size: 12px;
+      }
+      .bodyL .form .message a {
+        color: #4CAF50;
+        text-decoration: none;
+      }
+      .bodyL .form .register-form {
+        display: none;
+      }
+      .bodyL .container {
+        position: relative;
+        z-index: 1;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+      .bodyL .container .info {
+        margin: 50px auto;
+        text-align: center;
+      }
+      .bodyL .container .info h1 {
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 76px !important;
+        color: #1a1a1a;
+      }
+      .bodyL .container .info span {
+        color: #4d4d4d;
+        font-size: 92px;
+      }
+      .bodyL .container .info span a {
+        color: #000000;
+        text-decolation: none;
+      }
+      .bodyL .container .info span .fa {
+        color: #EF3B3A;
+      }
+      body .bodyL{
+          font-family: 'Bai Jamjuree', sans-serif !important;
+          height: 90vh;
+        /* background: #76b852; */
+        background:
+        linear-gradient(110deg, #24c173 50%, #9ae7ba 60%, #9ae7ba 32%, #d1f5de 52%, #d1f5de 0) 0 10vh/30vh calc(120vh - 200px) no-repeat,
+        linear-gradient(130deg, #62e6a5 45%, transparent 0) 0 100%/100% 100% no-repeat;
+      
+        /* background: linear-gradient(90deg, rgba(141,194,111,1) 0%, rgba(118,184,82,1) 50%); */
+        font-family: "Roboto", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;    
+      }
+      
+}

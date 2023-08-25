@@ -1,0 +1,118 @@
+
+/* FONTS */
+
+@font-face {
+    font-family: "";
+    src: url("../fonts");
+    
+  }
+  
+  /* FONTS END */
+  
+  /* GENERAL STYLE */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  
+  .btn,.form-control{
+    box-shadow: unset!important;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24) !important;
+  }
+  form{
+    margin-bottom: 50px !important;
+  }
+  .h2OBJ{
+    text-align: center;
+    font-size: 3rem !important;
+    margin-bottom: 30px;
+  }
+  
+  table{
+    margin-left: -80px !important;
+    border: 1px solid;
+    align-items: center;
+    text-align: center;
+  }
+  th{
+    border: 2.3px solid;
+  }
+  td{
+    border: 1px solid;
+  }
+  input{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24) !important;
+  }
+  table{
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+  .EXP{
+    height: 100px !important;
+  }
+  #job-posting-area{
+    /* background-image: url('https://c0.wallpaperflare.com/preview/146/436/921/decor-flatlay-from-above-house-plant.jpg');
+     */
+     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-size:100%;
+    background-position: center center;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* background-color: #f3f3f3; */
+  #job-posting-area .job-posting-wrapper{
+    max-width: 800px;
+  }
+  #job-posting-area .job-posting-area-heading{
+    text-transform: uppercase;
+    font-size: 24px;
+  }
+.h1{
+    font-size: 4rem !important;
+    text-align: center;
+    margin-bottom: 40px !important;
+  }
+  body{
+
+    font-family: 'Bai Jamjuree', sans-serif !important;
+  }
+  
+  
+
+
+
+
+@media (max-width: 991px){
+    .h1{
+        font-size: 2.5rem !important;
+        text-decoration: underline;
+        text-align: center;
+        margin-bottom: 40px !important;
+      }
+    table{
+        width: 20rem;
+        margin: 0 !important;
+        height: 100vh;
+    }
+    th{
+        font-size: 0.7rem;
+    }
+    .TD table th{
+        display: none;
+    }
+    .TD table td{
+        display: block;
+    }
+    .TD table td::before{
+        content: attr(data-heading) "     :     ";
+        font-weight: bold;
+    }
+    #fileIN{
+        width: 20rem !important;
+    }
+}

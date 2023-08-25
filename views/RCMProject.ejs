@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="StyleP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/0cuc5nq39d2loqg/bootstrap-tokenfield.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/popper.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section id="job-posting-area" class="py-5">
+    <div class="container">
+        <div class="job-posting-wrapper mx-auto p-3">
+    <h1 class="h1">Hello <%= username %>!</h1>
+    <form action="/RCMProject" method="POST">
+         <div class="form-group">
+        <% if (Faculty && Faculty.length > 0) { %>
+        <% Faculty.forEach(function(Faculty) { %>
+        <label for="Faculty"><h1><%= Faculty %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Faculty yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="Faculty" placeholder="Name of the Faculty member" name="Faculty">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    
+    <form action="/RCMProject" method="POST">
+         <div class="form-group">
+        <% if (CropRCM && CropRCM.length > 0) { %>
+            <% console.log("Type of CropRCM:", typeof CropRCM); %>
+        <% CropRCM.forEach(function(CropRCM) { %>
+        <label for="CropRCM"><h1><%= CropRCM %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite CropRCM yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="CropRCM" placeholder="Name of the Crop" name="CropRCM">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/RCMProject" method="POST">
+         <div class="form-group">
+        <% if (ResearchRCM && ResearchRCM.length > 0) { %>
+            <% console.log("Type of ResearchRCM:", typeof ResearchRCM); %>
+        <% ResearchRCM.forEach(function(ResearchRCM) { %>
+        <label for="ResearchRCM"><h1><%= ResearchRCM %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Title of Research yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="ResearchRCM" placeholder="Title of Research" name="ResearchRCM">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/RCMProject" method="POST">
+         <div class="form-group">
+        <% if (ObjectivesRCM && ObjectivesRCM.length > 0) { %>
+            <% console.log("Type of ObjectivesRCM:", typeof ObjectivesRCM); %>
+        <% ObjectivesRCM.forEach(function(ObjectivesRCM) { %>
+        <label for="ObjectivesRCM"><h1><%= ObjectivesRCM %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Objectives yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="ObjectivesRCM" placeholder="Objectives" name="ObjectivesRCM">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/RCMProject" method="POST">
+         <div class="form-group">
+        <% if (executionRCM && executionRCM.length > 0) { %>
+            <% console.log("Type of executionRCM:", typeof executionRCM); %>
+        <% executionRCM.forEach(function(executionRCM) { %>
+        <label for="Faculty"><h1><%= executionRCM %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Year of execution yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="executionRCM" placeholder="Year of execution" name="executionRCM">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/RCMProject" method="POST">
+         <div class="form-group">
+        <% if (DurationRCM && DurationRCM.length > 0) { %>
+            <% console.log("Type of DurationRCM:", typeof DurationRCM); %>
+        <% DurationRCM.forEach(function(DurationRCM) { %>
+        <label for="DurationRCM"><h1><%= DurationRCM %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Duration yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="DurationRCM" placeholder="Duration of experiment" name="DurationRCM">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/RCMProject" method="POST">
+         <div class="form-group">
+        <% if (TreatmentRCM && TreatmentRCM.length > 0) { %>
+            <% console.log("Type of TreatmentRCM:", typeof TreatmentRCM); %>
+        <% TreatmentRCM.forEach(function(TreatmentRCM) { %>
+        <label for="TreatmentRCM"><h1><%= TreatmentRCM %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Treatment details: yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="TreatmentRCM" placeholder="Treatment details" name="TreatmentRCM">
+        </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+         <div class="form-group">
+        <!-- Add other form fields here -->
+        <input type="hidden" name="sourcePage" value="<%= sourcePage %>">
+        <input type="file" name="file">
+        <button id="job-post-button" class="btn btn-primary mt-3" type="submit">Upload File</button>
+    </form>
+    <form action="/RCMProject" method="POST"> 
+        <div class="TD">
+            <table>
+            <div class="form-group">
+                <tr>
+                    <th>Treatment Details</th>
+                    <th>R1</th>
+                    <th>R2</th>
+                    <th>R3</th>
+                    <th>Mean</th>
+                </tr>
+                <% for (let i = 0; i < Math.max(TreatmentDetailsRCM.length, R1RCM.length, R2RCM.length, R3RCM.length); i++) { %>
+                    <tr>
+                        <td data-heading="Treatment Details"><%= i < TreatmentDetailsRCM.length ? TreatmentDetailsRCM[i] : '' %></td>
+                        <td data-heading="R1"><%= i < R1RCM.length ? R1RCM[i] : '' %></td>
+                        <td data-heading="R2"><%= i < R2RCM.length ? R2RCM[i] : '' %></td>
+                        <td data-heading="R3"><%= i < R3RCM.length ? R3RCM[i] : '' %></td>
+                        <td data-heading="Mean">
+                            <% 
+                            const r1ValueRCM = i < R1RCM.length && !isNaN(parseFloat(R1RCM[i])) ? parseFloat(R1RCM[i]) : 0;
+                            const r2ValueRCM = i < R2RCM.length && !isNaN(parseFloat(R2RCM[i])) ? parseFloat(R2RCM[i]) : 0;
+                            const r3ValueRCM = i < R3RCM.length && !isNaN(parseFloat(R3RCM[i])) ? parseFloat(R3RCM[i]) : 0;
+                            const meanValueRCM = (r1ValueRCM + r2ValueRCM + r3ValueRCM) / 3;
+                            %>
+                            <%= meanValueRCM.toFixed(2) %>
+                        </td>
+                        
+                    
+                    <td>
+                        <form action="/delete" method="POST">
+                            <input type="hidden" name="rowIndex" value="<%= i %>_rcmproject">
+                            <button id="job-post-button" class="btn btn-danger mt-3" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+                <% } %>
+                
+    
+    
+            <tr>
+                <td><input type="text" placeholder="Treatment Details" name="TreatmentDetailsRCM"></td>
+            <td><input type="text" placeholder="R1" name="R1RCM"></td>
+            <td><input type="text" placeholder="R2" name="R2RCM"></td>
+            <td><input type="text" placeholder="R3" name="R3RCM"></td>
+            <td><input type="text" placeholder="Mean" name="MeanRCM"></td>
+                <td><button id="job-post-button" class="btn btn-success mt-3" type="submit">Submit</button></td>
+            </tr>
+        </div>
+    </table>
+</div>
+            </form>
+            </div>
+            </div>
+        </section>
+</body>
+</html>
