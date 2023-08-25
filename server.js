@@ -15,6 +15,7 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const uploadsDir = path.join(__dirname, 'uploads');
+
 if (!fs.existsSync(uploadsDir)) {
     fs.mkdirSync(uploadsDir);
 }
@@ -568,8 +569,16 @@ app.post('/upload', upload.single('file'), async (req, res) => {
 
 
 
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
 
 
 
-
-    app.listen(3000);
+    // app.listen(3000);
