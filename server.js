@@ -15,6 +15,7 @@ const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 const uploadsDir = path.join(__dirname, 'uploads');
+const RedisStore = require('connect-redis')(session);
 
 if (!fs.existsSync(uploadsDir)) {
     fs.mkdirSync(uploadsDir);
@@ -47,13 +48,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('public'));
 app.use(flash());
-app.use(
-    session({
-        secret: process.env.SESSION_SECRET,
-        resave: true,
-        saveUninitialized: true,
-    })
-).env
+app.use(session({
+    store: new RedisStore({
+        url: process.env.REDIS_URL, // Redis connection URL
+    }),
+    secret: process.env.SESSION_SECRET,
+    resave: true,
+    saveUninitialized: true,
+}));
 app.use(passport.initialize());
 app.use(passport.session());
 
