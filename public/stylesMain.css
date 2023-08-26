@@ -1,122 +1,168 @@
+
+
+
+
+
+
+
 body{
-    background-image: url('/wallpaperflare.com_wallpaper (5).jpg');
-    background-size: 100% 100vh;
-    padding: 0;
-    margin: 0;
+    background-image: url('/wallpaperflare.com_wallpaper (5).jpg') !important;
+    background-size: 100% 100vh !important;
+    padding: 0 !important;
+    margin: 0 !important;
     font-family: 'Bai Jamjuree', sans-serif !important;
 }
+nav{
+  padding: 0 21px;
+}
 .Outer{
-    text-align: center;
+    text-align: center !important;
     border-radius: 20px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    margin: 23vh 0 0 40px;
-    font-size: 1.3rem;
-    background-color: white;
-    width: 400px;
-    height: 440px;
-    padding: 30px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.24) !important;
+    margin: 15vh 0 0 80px !important;
+    font-size: 1.3rem !important;
+    background-color: white !important;
+    width: 400px !important;
+    height: 500px !important;
+    padding: 30px !important;
 }
 .Outer form{
-    line-height: 100px;
+    line-height: 100px !important;
 }
 .offset {
-    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color) !important;
   }
   .offset:hover, .offset:focus {
-    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover) !important;
   }
   
   .offset {
-    --color: #000;
-    --hover: #19bc8b;
+    --color: #000 !important;
+    --hover: #19bc8b !important;
   }
   
   button {
-    color: var(--color);
-    transition: 0.25s;
+    color: var(--color) !important;
+    transition: 0.25s !important;
   }
   button:hover, button:focus {
-    border-color: var(--hover);
-    color: #fff;
+    border-color: var(--hover) !important;
+    color: #fff !important
   }
   
   button {
-    background: none;
-    border: 2px solid;
-    font: inherit;
-    line-height: 10px;
-    margin: 0.5em;
-    padding: 1em 2em;
+    background: none !important;
+    border: 2px solid !important;
+    font: inherit !important;
+    line-height: 10px !important;
+    margin: 0.5em !important;
+    padding: 1em 2em !important;
   }
   
   code {
-    color: #e4cb58;
-    font: inherit;
+    color: #e4cb58 !important;
+    font: inherit !important;
   }
-
-
 
 
 
 
 @media (max-width: 991px){
   body{
-    background-image: url('https://c0.wallpaperflare.com/preview/146/436/921/decor-flatlay-from-above-house-plant.jpg');
-    background-size:100%;
-    background-position: center center;
-    padding: 0;
-    margin: 0;
+    background-image: url('https://c0.wallpaperflare.com/preview/146/436/921/decor-flatlay-from-above-house-plant.jpg') !important;
+    background-size:100% !important;
+    background-position: center center !important;
+    padding: 0 !important;
+    margin: 0 !important;
     font-family: 'Bai Jamjuree', sans-serif !important;
 
 }
+.navbar{
+  z-index: 1;
+}
+
+nav a{
+  font-size: 5rem !important;
+  text-align: center;
+  align-items: center;
+}
+nav p{
+  font-size: 2rem;
+  text-align: center;
+  align-items: center;
+}
+nav span{
+  font-size: 2.3rem !important;
+  text-align: center;
+  align-items: center;
+}
+nav button{
+  font-size: 0.5rem !important;
+
+  margin-top: 20px;
+    align-items: center;
+    width: 100%;
+}
+.Outer h1{
+  font-size: 6.5rem !important;
+  color: black;
+}
 .Outer{
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    margin: 9vh 0 0 60px;
-    font-size: 3.3rem;
-    background-color: white;
-    width: 800px;
-    height: 1340px;
-    padding: 30px;
-    opacity: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  align-items: center;
+    text-align: center !important;
+    border-radius: 20px !important;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.9), 0 5px 5px 0 rgba(0, 0, 0, 0.24) !important;
+    margin: 6vh 0 0 0 !important;
+    font-size: 3.3rem !important;
+    background-color: white !important;
+    width: 800px !important;
+    height: 1340px !important;
+    padding: 30px !important;
+    opacity: 90% !important;
 }
 .Outer form{
-    line-height: 280px;
+    line-height: 280px !important;
 }
 .offset {
-    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color);
+    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color) !important;
   }
   .offset:hover, .offset:focus {
-    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover);
+    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover) !important;
   }
   
   .offset {
-    --color: #000;
-    --hover: #19bc8b;
+    --color: #000 !important;
+    --hover: #19bc8b !important;
   }
   
   button {
-    color: var(--color);
-    transition: 0.25s;
+    color: var(--color) !important;
+    transition: 0.25s !important;
   }
   button:hover, button:focus {
-    border-color: var(--hover);
-    color: #fff;
+    border-color: var(--hover) !important;
+    color: #fff !important;
   }
   
   button {
-    background: none;
-    border: 2px solid;
-    font: inherit;
-    line-height: 50px;
-    margin: 0.5em;
-    padding: 1em 2em;
+    background: none !important;
+    border: 2px solid !important;
+    font: inherit !important;
+    line-height: 50px !important;
+    margin: 0.5em !important;
+    padding: 1em 2em !important;
   }
   
   code {
-    color: #e4cb58;
-    font: inherit;
+    color: #e4cb58 !important;
+    font: inherit !important;
   }
     
 }
+
+
+
