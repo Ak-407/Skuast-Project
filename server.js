@@ -192,7 +192,6 @@ app.get('/ExternallyFundedProject', async (req, res) => {
                 sourcePage: "extproject",
             });
 
-            console.log(TreatmentDetailsEXT+"       get");
         } catch (err) {
             console.error("Error fetching skill items:", err);
             res.redirect('/login');
@@ -238,7 +237,6 @@ app.post('/ExternallyFundedProject', async function (req, res) {
                     }
                 
                 );
-            console.log(TreatmentDetailsEXT+"       post");
               res.redirect("/ExternallyFundedProject")
         } catch (error) {
             console.error('Error updating favorite game:', error);
@@ -307,7 +305,6 @@ app.get('/RCMProject', async (req, res) => {
                 sourcePage: "rcmproject",
             });
 
-            console.log(TreatmentDetailsRCM+"       get");
         } catch (err) {
             console.error("Error fetching skill items:", err);
             res.redirect('/login');
@@ -354,7 +351,6 @@ app.post('/RCMProject', async function (req, res) {
                     }
                 
                 );
-            console.log(TreatmentDetailsRCM+"       post");
               res.redirect("/RCMProject")
         } catch (error) {
             console.error('Error updating favorite game:', error);
@@ -365,8 +361,6 @@ app.post('/RCMProject', async function (req, res) {
     }
 });
 app.get('/profile', async function (req, res) {
-    console.log("req.isAuthenticated():", req.isAuthenticated());
-    console.log("req.user:", req.user);
     
     if (req.isAuthenticated() && req.user && req.user.username) {
         const username = req.user.username.substring(0, req.user.username.indexOf('@'));
@@ -383,7 +377,6 @@ app.get('/profile', async function (req, res) {
         const R1 = req.user.R1;
         const R2 = req.user.R2;
         const R3 = req.user.R3;
-        console.log(R1+" "+R2+" "+TreatmentDetails+"    get");
         try {
             res.render("profile.ejs", {
                 username: username,
@@ -431,7 +424,6 @@ app.post('/profile', async function (req, res) {
         const R1 = req.body.R1;
         const R2 = req.body.R2;
         const R3 = req.body.R3;
-        console.log(R1+" "+R2+" "+TreatmentDetails+"    post");
         try {
             await logindata.updateMany(
                 { username: req.user.username },
@@ -496,12 +488,6 @@ app.post('/delete', async function (req, res) {
             }
 
 
-            console.log("Before update:");
-            console.log("TreatmentDetails:", updatedTreatmentDetails);
-            console.log("R1:", updatedR1);
-            console.log("R2:", updatedR2);
-            console.log("R3:", updatedR3);
-
             await logindata.findByIdAndUpdate(
                 user._id,
                 {
@@ -519,12 +505,6 @@ app.post('/delete', async function (req, res) {
                     R3EXT: updatedR3EXT,
                 }
             );
-
-            console.log("After update:");
-            console.log("TreatmentDetails:", user.TreatmentDetails);
-            console.log("R1:", user.R1);
-            console.log("R2:", user.R2);
-            console.log("R3:", user.R3);
 
             res.redirect(redirectUrl);
         } catch (error) {
