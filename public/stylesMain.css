@@ -26,20 +26,24 @@ nav{
     height: 500px !important;
     padding: 30px !important;
 }
+.Outer h1 {
+  font-size: 2.3rem !important;
+  color: black;
+  margin-bottom: 2.4rem;
+}
 .Outer form{
     line-height: 100px !important;
 }
-.offset {
-    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color) !important;
-  }
-  .offset:hover, .offset:focus {
-    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover) !important;
-  }
-  
-  .offset {
-    --color: #000 !important;
-    --hover: #19bc8b !important;
-  }
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.raise {
+  --color: #000000;
+  --hover: #28ae3c;
+}
   
   button {
     color: var(--color) !important;
@@ -47,7 +51,7 @@ nav{
   }
   button:hover, button:focus {
     border-color: var(--hover) !important;
-    color: #fff !important
+    color: #000000 !important
   }
   
   button {
@@ -56,13 +60,11 @@ nav{
     font: inherit !important;
     line-height: 10px !important;
     margin: 0.5em !important;
-    padding: 1em 2em !important;
+    padding: 1em 20px !important;
+    border-radius:10px 1px !important;
   }
   
-  code {
-    color: #e4cb58 !important;
-    font: inherit !important;
-  }
+  
 
   .navbar-light .navbar-brand {
     color: rgba(0,0,0,.9);
@@ -102,10 +104,15 @@ nav span{
 }
 nav button{
   font-size: 0.5rem !important;
+
+  margin-top: 20px;
+    align-items: center;
+    width: 100%;
 }
-.Outer h1{
-  font-size: 6.5rem !important;
-  color: black;
+.Outer h1 {
+    font-size: 5rem !important;
+    color: black;
+    margin-bottom: 6rem;
 }
 .Outer{
   position: absolute;
@@ -127,17 +134,16 @@ nav button{
 .Outer form{
     line-height: 280px !important;
 }
-.offset {
-    box-shadow: 0.3em 0.3em 0 0 var(--color), inset 0.3em 0.3em 0 0 var(--color) !important;
-  }
-  .offset:hover, .offset:focus {
-    box-shadow: 0 0 0 0 var(--hover), inset 6em 3.5em 0 0 var(--hover) !important;
-  }
-  
-  .offset {
-    --color: #000 !important;
-    --hover: #19bc8b !important;
-  }
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+.raise {
+  --color: #000000;
+  --hover: #28ae3c;
+}
   
   button {
     color: var(--color) !important;
@@ -145,17 +151,18 @@ nav button{
   }
   button:hover, button:focus {
     border-color: var(--hover) !important;
-    color: #fff !important;
+    color: #000000 !important;
   }
   
-  button {
+  .Outer button {
     background: none !important;
-    border: 2px solid !important;
+    border: 5px solid !important;
     font: inherit !important;
     line-height: 50px !important;
     margin: 0.5em !important;
-    padding: 1em 2em !important;
-  }
+    padding: 1em 1em !important;
+    border-radius:70px 1px !important;
+}
   
   code {
     color: #e4cb58 !important;
